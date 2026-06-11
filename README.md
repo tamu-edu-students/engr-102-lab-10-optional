@@ -34,7 +34,7 @@ Specific entropy (kJ/kgK): 0.6984
 
 
 ## Guessing Game
-Write a python program named `guessing_game.py` to play a number guessing game. Have your program display a short message with instructions, then continually prompt the user to guess a number. With each wrong guess, let the user know if their guess is too high or too low. When the user correctly guesses the number, output the total number of valid guesses made. **Write your program using at least two (2) functions and a try-except statement.** For the purposes of autograding, make your secret number 12, and use the example output below for the text.
+Write a python program named `guessing_game.py` to play a number guessing game. Have your program display a short message with instructions, then continually prompt the user to guess a number. With each wrong guess, let the user know if their guess is too high or too low. When the user correctly guesses the number, output the total number of valid guesses made. **Write your program using at least two (2) functions and a try-except statement.** For the purposes of autograding, make your secret number `12`, and use the example output below for the text.
 
 Example output:
 ```
@@ -50,9 +50,28 @@ You guessed it! It took you 3 guesses.
 
 
 ## Sum Squares
+In Fall 2023 ChatGPT (GPT-3.5) was given the following prompt:
 
+*Write a Python function that takes as an argument a positive integer and returns a list of four numbers that when squared add up to the positive integer of interest*
+
+The response is provided in the program named [`sum_squares.py`](sum_squares.py). Unfortunately, this code does not work for many numbers, and for very large numbers the code is extremely slow. Modify the function named `list_nums` to produce correct output in a reasonable amount of computational time. Please comment out any `input()` statements before submitting. It's okay to have `print()` statements.
+
+As an example, `list_nums(15)` should return `[1, 1, 2, 3]` because `1^2 + 1^2 + 2^2 + 3^2 = 15`.
+
+**Bonus:** Some numbers have multiple correct solutions. Write a function named `count_sets` that takes as a parameter a positive integer `n` and returns the number (count) of unique sets of four numbers that when squared add up to `n`. Include the function named as specified in your file.
 
 ## No Three in a Line
+In Fall 2024 ChatGPT (GPT-3.5) was given the following prompt:
+
+*Write a Python function that takes an argument n and returns the largest set of points of integer coordinates in an n by n grid such that no three points are in a line*
+
+The response is provided in the program named [`no_three_in_a_line.py`](no_three_in_a_line.py). Unfortunately, this code does not work. Modify the function named `no_three_in_line` to return a set of points that satisfy the requirements in a reasonable amount of computational time. Please comment out any `input()` statements before submitting. It's okay to have `print()` statements.
+
+Here are examples to get you started (there are many correct answers):
+- `no_three_in_line(3)` may return `[[0, 0], [1, 1], [1, 2], [2, 0]]`
+- `no_three_in_line(4)` may return `[[0, 0], [0, 1], [1, 1], [1, 2], [2, 0], [3, 2]]`
+
+For grid sizes up to `n=46`, the conjectured largest set of points is `2n`. This can be difficult to solve with code, so your submission only needs to find a minimum of `n` points. **Bonus:** Have your code find `1.8n` or more points.
 
 
 Revised Summer 2026 SNR
